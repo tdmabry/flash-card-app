@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  font-family: Arial;
+  color: #333;
+}
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 2px solid black;
+  /* background-color: lightblue; */
+}
+
+.navbar h1 {
+  display: block;
+}
+
+.navbar .links {
+  margin-left: auto;
+  display: block;
+}
+
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+} 
+
+.decklist {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.decklist h3 {
+  display: inline;
+}
+
+.content {
+  padding-top: 20px;
+}
+
+.deckrow {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #E0DDDD;
+}
+
+.deckrow a {
+  text-decoration: none;
+}
+
+.deckrow a:hover {
+  text-decoration: underline;
+}
+
+.add, .carddetails {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 400px;
+}
+
+.add h2, .carddetails h2 {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.add label, .carddetails label {
+  text-align: left;
+  display: block;
+}
+
+.add input, .carddetails input {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 6px 10px;
+  display: block;
+}
+
+.add button, .carddetails button {
+  padding: 8px;
+  border: 0;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.browse {
+  text-align: center;
+  overflow-y: auto;
+}
+
+/* .cardrow:nth-child(even) {
+  background-color: #E0DDDD;
+} */
+
+.cardinfo, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 400px;
+}
+
+table {
+  margin: 0 auto;
+  text-align: left;
+  table-layout: fixed;
+  width: 400px;
+}
+
+.tableheader {
+  margin: 0 auto;
+  display: table;
+  text-align: left;
+  background-color: #E0DDDD;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+table {
+  overflow-y: auto;
+}
+
+.card-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: .25rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+  background-color: white;
+  transform-style: preserve-3d;
+  height: 200px;
+  cursor: pointer;
+  transition: 150ms;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0));
+}
+
+.card:hover {
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card.flip {
+  --rotate-y: 180deg;
+}
+
+.card .front, .card .back {
+  position: absolute;
+  padding: 1rem;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
