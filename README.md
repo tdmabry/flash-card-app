@@ -27,6 +27,5 @@ In a separate terminal, running nodemon app in the server directory connects you
 ## Todo
 
 - Work on app responiveness
-- Deploy app to website
 - Check app for any bugs
 - Add pictures to README
